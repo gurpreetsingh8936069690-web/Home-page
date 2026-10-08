@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import {
-  Compass,
-  Eye,
-  ShieldCheck,
-  ArrowRight,
-  Layers,
-  CheckCircle,
-  Calendar,
-  Sparkles,
-  TrendingUp,
-} from 'lucide-react';
+  FiCompass,
+  FiEye,
+  FiShield,
+  FiArrowRight,
+  FiLayers,
+  FiCheckCircle,
+  FiCalendar,
+  FiTrendingUp,
+  FiCheck,
+} from 'react-icons/fi';
 import { agencyData } from '../data/agencyData';
 
 export default function About({ onOpenContact }) {
@@ -34,7 +34,7 @@ export default function About({ onOpenContact }) {
         {/* Section Header */}
         <div className="section-header">
           <div className="section-badge">
-            <Compass size={14} />
+            <FiCompass size={14} />
             <span>{agencyData.about.badge}</span>
           </div>
           <h2 className="section-title">
@@ -64,7 +64,7 @@ export default function About({ onOpenContact }) {
                   role="tab"
                   aria-selected={activeTab === 'mission'}
                 >
-                  <Compass size={15} />
+                  <FiCompass size={15} />
                   <span>Our Mission</span>
                 </button>
                 <button
@@ -74,7 +74,7 @@ export default function About({ onOpenContact }) {
                   role="tab"
                   aria-selected={activeTab === 'vision'}
                 >
-                  <Eye size={15} />
+                  <FiEye size={15} />
                   <span>Our Vision</span>
                 </button>
                 <button
@@ -84,7 +84,7 @@ export default function About({ onOpenContact }) {
                   role="tab"
                   aria-selected={activeTab === 'values'}
                 >
-                  <ShieldCheck size={15} />
+                  <FiShield size={15} />
                   <span>Core Values</span>
                 </button>
               </div>
@@ -95,11 +95,11 @@ export default function About({ onOpenContact }) {
                     <p className="tab-pane-text">{agencyData.about.mission}</p>
                     <div className="tab-features-list">
                       <div className="tab-feature-item">
-                        <CheckCircle size={15} className="feature-check" />
+                        <FiCheckCircle size={15} className="feature-check" />
                         <span>Data-backed campaigns with statistical rigor</span>
                       </div>
                       <div className="tab-feature-item">
-                        <CheckCircle size={15} className="feature-check" />
+                        <FiCheckCircle size={15} className="feature-check" />
                         <span>Zero vanity metrics; we track real attributed revenue</span>
                       </div>
                     </div>
@@ -111,11 +111,11 @@ export default function About({ onOpenContact }) {
                     <p className="tab-pane-text">{agencyData.about.vision}</p>
                     <div className="tab-features-list">
                       <div className="tab-feature-item">
-                        <CheckCircle size={15} className="feature-check" />
+                        <FiCheckCircle size={15} className="feature-check" />
                         <span>Pioneering automated multi-touch attribution</span>
                       </div>
                       <div className="tab-feature-item">
-                        <CheckCircle size={15} className="feature-check" />
+                        <FiCheckCircle size={15} className="feature-check" />
                         <span>Total client asset ownership &amp; open-book reporting</span>
                       </div>
                     </div>
@@ -138,9 +138,9 @@ export default function About({ onOpenContact }) {
             </div>
 
             <div className="about-cta-row">
-              <a href="#contact" className="btn btn-primary btn-shimmer" onClick={scrollToContact}>
+              <a href="#contact" className="btn btn-primary" onClick={scrollToContact}>
                 <span>Learn More About Our Approach</span>
-                <ArrowRight size={16} className="btn-arrow" />
+                <FiArrowRight size={16} className="btn-arrow" />
               </a>
             </div>
           </div>
@@ -162,10 +162,10 @@ export default function About({ onOpenContact }) {
             <div className="methodology-card">
               <div className="methodology-header">
                 <div className="methodology-icon-wrap">
-                  <Layers size={18} className="methodology-icon" />
+                  <FiLayers size={18} className="methodology-icon" />
                 </div>
                 <div>
-                  <h4 className="methodology-title">The Apex Growth Engine™</h4>
+                  <h4 className="methodology-title">The {agencyData.brand.name} {agencyData.brand.suffix} Growth Engine™</h4>
                   <span className="methodology-sub">4-Stage Proprietary Revenue System</span>
                 </div>
               </div>
@@ -191,11 +191,11 @@ export default function About({ onOpenContact }) {
               <div className="active-step-card tab-anim">
                 <div className="active-step-top">
                   <span className="active-step-timeline">
-                    <Calendar size={13} />
+                    <FiCalendar size={13} />
                     <span>{currentStep.timeline}</span>
                   </span>
                   <span className="active-step-kpi">
-                    <TrendingUp size={13} />
+                    <FiTrendingUp size={13} />
                     <span>{currentStep.kpi}</span>
                   </span>
                 </div>
@@ -204,7 +204,7 @@ export default function About({ onOpenContact }) {
                 <p className="active-step-desc">{currentStep.desc}</p>
 
                 <div className="active-step-deliverable">
-                  <Sparkles size={14} className="deliverable-sparkle" />
+                  <FiCheck size={14} className="deliverable-check text-cyan" />
                   <span>Deliverable: <strong>{currentStep.deliverable}</strong></span>
                 </div>
               </div>

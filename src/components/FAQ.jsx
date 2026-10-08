@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import {
-  HelpCircle,
-  ChevronDown,
-  Search,
-  MessageSquare,
-  ArrowRight,
-} from 'lucide-react';
+  FiHelpCircle,
+  FiChevronDown,
+  FiSearch,
+  FiMessageSquare,
+  FiArrowRight,
+} from 'react-icons/fi';
 import { agencyData } from '../data/agencyData';
 
 export default function FAQ({ onOpenContact }) {
@@ -33,8 +33,8 @@ export default function FAQ({ onOpenContact }) {
         {/* Section Header */}
         <div className="section-header">
           <div className="section-badge">
-            <HelpCircle size={14} />
-            <span>CLARITY & TRANSPARENCY</span>
+            <FiHelpCircle size={14} />
+            <span>CLARITY &amp; TRANSPARENCY</span>
           </div>
           <h2 className="section-title">
             Frequently Asked{' '}
@@ -48,7 +48,7 @@ export default function FAQ({ onOpenContact }) {
         {/* Search Bar for FAQ */}
         <div className="faq-search-wrapper">
           <div className="faq-search-box">
-            <Search size={18} className="faq-search-icon" />
+            <FiSearch size={18} className="faq-search-icon" />
             <input
               type="text"
               className="faq-search-input"
@@ -104,7 +104,7 @@ export default function FAQ({ onOpenContact }) {
                       <h3 className="faq-question-text">{faq.question}</h3>
                     </div>
                     <div className={`faq-icon-toggle ${isOpen ? 'rotate' : ''}`}>
-                      <ChevronDown size={20} />
+                      <FiChevronDown size={20} />
                     </div>
                   </button>
 
@@ -127,7 +127,7 @@ export default function FAQ({ onOpenContact }) {
         {/* Bottom Help Prompt */}
         <div className="faq-help-box">
           <div className="help-icon-wrap">
-            <MessageSquare size={22} />
+            <FiMessageSquare size={22} />
           </div>
           <div className="help-text-wrap">
             <h4 className="help-title">Have a question that isn't answered here?</h4>
@@ -146,7 +146,7 @@ export default function FAQ({ onOpenContact }) {
             }}
           >
             <span>Ask Our Strategists</span>
-            <ArrowRight size={15} />
+            <FiArrowRight size={15} />
           </a>
         </div>
       </div>

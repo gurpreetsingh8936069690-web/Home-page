@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, ShieldCheck } from 'lucide-react';
+import { FiX, FiShield } from 'react-icons/fi';
 import { agencyData } from '../data/agencyData';
 
 export default function LegalModal({ type, onClose }) {
@@ -92,7 +92,7 @@ export default function LegalModal({ type, onClose }) {
       <div className="modal-card legal-modal-card" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <div className="modal-header-tag">
-            <ShieldCheck size={14} />
+            <FiShield size={14} />
             <span>Compliance &amp; Legal</span>
           </div>
           <button
@@ -101,7 +101,7 @@ export default function LegalModal({ type, onClose }) {
             onClick={onClose}
             aria-label="Close legal modal"
           >
-            <X size={20} />
+            <FiX size={20} />
           </button>
         </div>
 

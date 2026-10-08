@@ -1,5 +1,5 @@
 /* ==========================================================================
-   APEXGROWTH DIGITAL - COMPREHENSIVE COMPONENT STYLES
+   RV CANVAS - COMPREHENSIVE COMPONENT STYLES
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -65,13 +65,22 @@
 .logo-text {
   display: flex;
   align-items: baseline;
-  gap: 2px;
+  gap: 3px;
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
 }
 
 .logo-highlight {
-  color: var(--accent-secondary);
-  font-weight: 600;
-  margin-left: 2px;
+  background: linear-gradient(135deg, #06b6d4 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  margin-left: 1px;
+}
+
+.rv-canvas-logo-svg {
+  display: block;
+  transition: transform var(--transition-normal);
 }
 
 /* Desktop Nav Links */

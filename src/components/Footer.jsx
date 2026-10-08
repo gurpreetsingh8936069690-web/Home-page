@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
 import {
-  Sparkles,
-  ArrowUp,
-  Mail,
-  Phone,
-  Check,
-  Send,
-} from 'lucide-react';
-import { agencyData } from '../data/agencyData';
+  FiArrowUp,
+  FiMail,
+  FiPhone,
+  FiCheck,
+  FiSend,
+} from 'react-icons/fi';
 import {
-  LinkedInIcon,
-  TwitterIcon,
-  InstagramIcon,
-  YouTubeIcon,
-  GitHubIcon,
-} from './SocialIcons';
+  FaLinkedinIn,
+  FaXTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaGithub,
+} from 'react-icons/fa6';
+import { agencyData } from '../data/agencyData';
+import RvCanvasLogo from './RvCanvasLogo';
 
 const socialComponentMap = {
-  Linkedin: LinkedInIcon,
-  Twitter: TwitterIcon,
-  Instagram: InstagramIcon,
-  Youtube: YouTubeIcon,
-  Github: GitHubIcon,
+  Linkedin: FaLinkedinIn,
+  Twitter: FaXTwitter,
+  Instagram: FaInstagram,
+  Youtube: FaYoutube,
+  Github: FaGithub,
 };
 
 export default function Footer({ onOpenLegal, onSelectService }) {
@@ -64,7 +64,7 @@ export default function Footer({ onOpenLegal, onSelectService }) {
               onClick={(e) => handleNavClick(e, '#home')}
             >
               <div className="logo-symbol">
-                <Sparkles size={18} />
+                <RvCanvasLogo size={24} />
               </div>
               <span className="logo-text">
                 {agencyData.brand.name}
@@ -157,7 +157,7 @@ export default function Footer({ onOpenLegal, onSelectService }) {
                   className="newsletter-submit-btn"
                   aria-label="Subscribe to newsletter"
                 >
-                  {newsletterSubscribed ? <Check size={16} className="text-emerald" /> : <Send size={15} />}
+                  {newsletterSubscribed ? <FiCheck size={16} className="text-emerald" /> : <FiSend size={15} />}
                 </button>
               </div>
               {newsletterSubscribed && (
@@ -169,11 +169,11 @@ export default function Footer({ onOpenLegal, onSelectService }) {
 
             <div className="footer-contact-snippets">
               <div className="snippet-item">
-                <Mail size={14} className="snippet-icon" />
+                <FiMail size={14} className="snippet-icon" />
                 <a href={`mailto:${agencyData.contact.email}`}>{agencyData.contact.email}</a>
               </div>
               <div className="snippet-item">
-                <Phone size={14} className="snippet-icon" />
+                <FiPhone size={14} className="snippet-icon" />
                 <a href={`tel:${agencyData.contact.phone.replace(/[^0-9+]/g, '')}`}>
                   {agencyData.contact.phone}
                 </a>
@@ -220,7 +220,7 @@ export default function Footer({ onOpenLegal, onSelectService }) {
             aria-label="Scroll back to top of page"
           >
             <span>Back to top</span>
-            <ArrowUp size={14} />
+            <FiArrowUp size={14} />
           </button>
         </div>
       </div>

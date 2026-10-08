@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, CheckCircle2, ArrowRight, Clock, Sparkles } from 'lucide-react';
+import { FiX, FiCheckCircle, FiArrowRight, FiClock, FiLayers } from 'react-icons/fi';
 
 export default function ServiceModal({ service, onClose, onBookService }) {
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function ServiceModal({ service, onClose, onBookService }) {
         {/* Header */}
         <div className="modal-header">
           <div className="modal-header-tag">
-            <Sparkles size={14} />
+            <FiLayers size={14} />
             <span>{service.category}</span>
           </div>
           <button
@@ -31,7 +31,7 @@ export default function ServiceModal({ service, onClose, onBookService }) {
             onClick={onClose}
             aria-label="Close service details"
           >
-            <X size={20} />
+            <FiX size={20} />
           </button>
         </div>
 
@@ -47,7 +47,7 @@ export default function ServiceModal({ service, onClose, onBookService }) {
           <div className="modal-stat-box">
             <span className="modal-stat-label">Timeline Cadence</span>
             <strong className="modal-stat-val text-main">
-              <Clock size={14} className="inline-icon" /> {service.timeline}
+              <FiClock size={14} className="inline-icon" /> {service.timeline}
             </strong>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function ServiceModal({ service, onClose, onBookService }) {
           <div className="modal-deliverables-list">
             {service.deliverables.map((item, idx) => (
               <div key={idx} className="modal-deliverable-item">
-                <CheckCircle2 size={16} className="text-emerald" />
+                <FiCheckCircle size={16} className="text-emerald" />
                 <span>{item}</span>
               </div>
             ))}
@@ -76,7 +76,7 @@ export default function ServiceModal({ service, onClose, onBookService }) {
             }}
           >
             <span>Request Proposal For {service.name}</span>
-            <ArrowRight size={16} />
+            <FiArrowRight size={16} />
           </button>
 
           <button

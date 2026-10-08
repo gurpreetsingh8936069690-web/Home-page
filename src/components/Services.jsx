@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
 import {
-  Search,
-  Share2,
-  Target,
-  FileText,
-  Code2,
-  Palette,
-  Mail,
-  TrendingUp,
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-} from 'lucide-react';
+  FiSearch,
+  FiShare2,
+  FiTarget,
+  FiFileText,
+  FiCode,
+  FiPenTool,
+  FiMail,
+  FiTrendingUp,
+  FiArrowRight,
+  FiCheckCircle,
+  FiLayers,
+} from 'react-icons/fi';
 import { agencyData } from '../data/agencyData';
 
-// Icon mapping helper
+// Icon mapping helper with clean react-icons
 const iconMap = {
-  Search,
-  Share2,
-  Target,
-  FileText,
-  Code2,
-  Palette,
-  Mail,
-  TrendingUp,
+  Search: FiSearch,
+  Share2: FiShare2,
+  Target: FiTarget,
+  FileText: FiFileText,
+  Code2: FiCode,
+  Palette: FiPenTool,
+  Mail: FiMail,
+  TrendingUp: FiTrendingUp,
 };
 
 export default function Services({ onSelectService, onBookService }) {
@@ -43,7 +43,7 @@ export default function Services({ onSelectService, onBookService }) {
         {/* Section Header */}
         <div className="section-header">
           <div className="section-badge">
-            <Sparkles size={14} />
+            <FiLayers size={14} />
             <span>FULL-SPECTRUM DIGITAL MARKETING</span>
           </div>
           <h2 className="section-title">
@@ -94,7 +94,7 @@ export default function Services({ onSelectService, onBookService }) {
                 <div className="service-deliverables">
                   {service.deliverables.slice(0, 3).map((item, idx) => (
                     <div key={idx} className="deliverable-bullet">
-                      <CheckCircle size={13} className="deliverable-icon" />
+                      <FiCheckCircle size={13} className="deliverable-icon" />
                       <span>{item}</span>
                     </div>
                   ))}
@@ -113,8 +113,8 @@ export default function Services({ onSelectService, onBookService }) {
                     onClick={() => onSelectService(service)}
                     aria-label={`Learn more about ${service.name}`}
                   >
-                    <span>Learn More & Scope</span>
-                    <ArrowRight size={15} className="arrow-icon" />
+                    <span>Learn More &amp; Scope</span>
+                    <FiArrowRight size={15} className="arrow-icon" />
                   </button>
 
                   <button
@@ -149,7 +149,7 @@ export default function Services({ onSelectService, onBookService }) {
             }}
           >
             <span>Request Custom Strategy</span>
-            <ArrowRight size={16} />
+            <FiArrowRight size={16} />
           </a>
         </div>
       </div>

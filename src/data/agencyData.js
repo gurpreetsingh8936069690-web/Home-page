@@ -1,6 +1,6 @@
 /**
  * =========================================================================
- * APEXGROWTH DIGITAL - AGENCY DATA CONFIGURATION
+ * RV CANVAS - AGENCY DATA CONFIGURATION
  * =========================================================================
  * This file serves as the single source of truth for the agency's content.
  * You can easily customize company names, branding, services, products,
@@ -10,9 +10,9 @@
 export const agencyData = {
   // BRANDING & BASIC INFO
   brand: {
-    name: "ApexGrowth",
-    suffix: "Digital",
-    tagline: "Premier Digital Marketing & Growth Partner",
+    name: "RV",
+    suffix: "Canvas",
+    tagline: "Premier Digital Marketing & Creative Growth Partner",
     foundedYear: 2021,
     rating: "4.9/5",
     totalReviews: "180+",
@@ -30,12 +30,12 @@ export const agencyData = {
 
   // HERO SECTION DATA
   hero: {
-    badge: "⚡ High-Performance Growth Partner",
+    badge: "Strategic Digital Growth & Performance Marketing",
     headlineStart: "Grow Your Business With ",
     headlineGradient: "Smarter Digital Marketing",
     headlineEnd: "",
     subheadline:
-      "We build data-driven organic search authority, high-ROI paid media campaigns, and conversion-optimized websites that turn casual browsers into lifetime customers.",
+      "We engineer data-driven organic search authority, high-ROI paid media campaigns, and conversion-optimized web experiences that turn casual browsers into lifetime customers.",
     primaryCta: {
       label: "Get Started",
       href: "#contact",
@@ -50,7 +50,7 @@ export const agencyData = {
         { initial: "SV", name: "Sarah Vance", company: "Novasphere", color: "#6366f1" },
         { initial: "MR", name: "Marcus Reed", company: "HyperScale", color: "#06b6d4" },
         { initial: "EL", name: "Elena Laurent", company: "Lumina Labs", color: "#10b981" },
-        { initial: "DK", name: "David Kim", company: "Velocity AI", color: "#f59e0b" },
+        { initial: "DK", name: "David Kim", company: "Veloce Mobility", color: "#f59e0b" },
       ],
       rating: "4.9/5",
       ratingCount: "180+",
@@ -65,13 +65,14 @@ export const agencyData = {
         roasGrowth: "+1.2x",
         conversions: "1,420",
         convGrowth: "+28.4%",
+        cacReduction: "-34%",
         chartBars: [
           { label: "W1", height: 38 },
           { label: "W2", height: 52 },
           { label: "W3", height: 70 },
           { label: "W4", height: 95, tooltip: "+$68.4k", active: true },
         ],
-        liveEvent: "Enterprise SaaS booked Growth Audit ($14.2k/mo)",
+        highlightMetric: "Blended Customer Acquisition Cost: -34%",
       },
       "90D": {
         revenue: "$784,200",
@@ -80,12 +81,13 @@ export const agencyData = {
         roasGrowth: "+1.8x",
         conversions: "4,680",
         convGrowth: "+36.1%",
+        cacReduction: "-39%",
         chartBars: [
           { label: "M1", height: 42 },
           { label: "M2", height: 68 },
           { label: "M3", height: 96, tooltip: "+$210k", active: true },
         ],
-        liveEvent: "DTC Brand scaled to 5.2x ROAS on Meta & Google",
+        highlightMetric: "DTC & B2B Pipeline Scaled to 5.2x ROAS",
       },
       "1Y": {
         revenue: "$2,840,000",
@@ -94,13 +96,14 @@ export const agencyData = {
         roasGrowth: "+2.1x",
         conversions: "18,920",
         convGrowth: "+49.3%",
+        cacReduction: "-45%",
         chartBars: [
           { label: "Q1", height: 40 },
           { label: "Q2", height: 62 },
           { label: "Q3", height: 82 },
           { label: "Q4", height: 98, tooltip: "+$890k", active: true },
         ],
-        liveEvent: "Global B2B captured #1 Google Ranking across 140 keywords",
+        highlightMetric: "Captured #1 Organic Rankings across 140 Target Keywords",
       },
     },
     // Hero Trust Metrics Strip
@@ -116,7 +119,7 @@ export const agencyData = {
       { name: "HyperScale", category: "E-Commerce" },
       { name: "QuantumPay", category: "Fintech" },
       { name: "Lumina Labs", category: "HealthTech" },
-      { name: "Velocity AI", category: "AI Platform" },
+      { name: "Veloce Mobility", category: "Automotive Tech" },
       { name: "Aura Home", category: "Direct-to-Consumer" },
     ],
   },
@@ -126,7 +129,7 @@ export const agencyData = {
     badge: "WHO WE ARE",
     title: "We Don't Just Buy Clicks. We Scale Market Leaders.",
     description:
-      "ApexGrowth was founded by a collective of seasoned growth engineers, creative strategists, and former Fortune 500 performance marketers. We noticed traditional agencies rely on vanity metrics like impressions and clicks that don't translate to real bank deposits.",
+      "RV Canvas was founded by a collective of seasoned growth engineers, creative strategists, and former Fortune 500 performance marketers. We noticed traditional agencies rely on vanity metrics like impressions and clicks that don't translate to real bank deposits.",
     descriptionSecond:
       "We took the opposite approach: full-funnel transparency, custom bespoke strategies, and a relentless focus on customer acquisition cost (CAC) and lifetime value (LTV).",
     mission:
@@ -378,7 +381,7 @@ export const agencyData = {
       features: [
         "Daily keyword position & volatility tracking",
         "Automated 404 & crawl anomaly alert system",
-        "AI-driven content optimization suggestions",
+        "Search intent & competitor content optimization",
         "Competitor backlink gap notifications",
       ],
       statLabel: "Rank Tracking",
@@ -398,7 +401,7 @@ export const agencyData = {
         "Single-click scheduling to 6+ major platforms",
         "Visual preview for grid, stories, reels, and feeds",
         "Client approval portal with timestamped comments",
-        "AI caption co-pilot with brand tone matching",
+        "Editorial guidelines & brand voice compliance",
       ],
       statLabel: "Platforms",
       statValue: "All Major Networks",
@@ -429,7 +432,7 @@ export const agencyData = {
   testimonials: [
     {
       quote:
-        "ApexGrowth transformed our customer acquisition economics. In 6 months, our organic search leads increased by 210% and our blended CAC dropped by 34%. They are an indispensable partner.",
+        "RV Canvas transformed our customer acquisition economics. In 6 months, our organic search leads increased by 210% and our blended CAC dropped by 34%. They are an indispensable partner.",
       author: "Marcus Vance",
       title: "Chief Marketing Officer",
       company: "Novasphere Cloud",
@@ -438,7 +441,7 @@ export const agencyData = {
     },
     {
       quote:
-        "Unlike previous agencies who gave us endless spreadsheets with vanity clicks, ApexGrowth focused squarely on bottom-line revenue. Their PPC rebuild alone generated a 4.6x ROAS.",
+        "Unlike previous agencies who gave us endless spreadsheets with vanity clicks, RV Canvas focused squarely on bottom-line revenue. Their PPC rebuild alone generated a 4.6x ROAS.",
       author: "Elena Rostova",
       title: "Founder & CEO",
       company: "Aura Home Goods",
@@ -515,11 +518,11 @@ export const agencyData = {
     title: "Ready to Grow Your Business?",
     subtitle:
       "Tell us about your project, current bottlenecks, and growth targets. Our senior strategists will analyze your market and provide a tailored proposal within 24 hours.",
-    email: "growth@apexgrowth.agency",
+    email: "growth@rvcanvas.com",
     phone: "+1 (800) 456-GROW (4769)",
     address: "450 Lexington Ave, Suite 1800, New York, NY 10017",
     hours: "Monday – Friday: 8:00 AM – 6:00 PM EST (24/7 Client Emergency Support)",
-    guarantee: "⚡ Guaranteed response within 2 hours during business hours",
+    guarantee: "Guaranteed response within 2 hours during business hours",
     serviceOptions: [
       "Full-Funnel Growth (All Services)",
       "SEO & Organic Search Dominance",
@@ -552,7 +555,7 @@ export const agencyData = {
   footer: {
     tagline:
       "Data-driven digital marketing agency dedicated to turning ambitious brands into undisputed category leaders.",
-    copyright: "© 2026 ApexGrowth Digital Agency LLC. All rights reserved.",
+    copyright: "© 2026 RV Canvas Digital Agency LLC. All rights reserved.",
     quickLinks: [
       { label: "Home", href: "#home" },
       { label: "About Us", href: "#about" },

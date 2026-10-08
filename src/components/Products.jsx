@@ -1,20 +1,21 @@
 import React from 'react';
 import {
-  Cpu,
-  Gauge,
-  Layers,
-  BarChart3,
-  ArrowRight,
-  CheckCircle2,
-  PlayCircle,
-} from 'lucide-react';
+  FiCpu,
+  FiTrendingUp,
+  FiLayers,
+  FiBarChart2,
+  FiArrowRight,
+  FiCheckCircle,
+  FiPlayCircle,
+  FiBox,
+} from 'react-icons/fi';
 import { agencyData } from '../data/agencyData';
 
 const productIcons = {
-  Cpu,
-  Gauge,
-  Layers,
-  BarChart3,
+  Cpu: FiCpu,
+  Gauge: FiTrendingUp,
+  Layers: FiLayers,
+  BarChart3: FiBarChart2,
 };
 
 export default function Products({ onOpenDemoModal, onBookProduct }) {
@@ -27,8 +28,8 @@ export default function Products({ onOpenDemoModal, onBookProduct }) {
         {/* Section Header */}
         <div className="section-header">
           <div className="section-badge products-badge">
-            <Cpu size={14} />
-            <span>PROPRIETARY SOLUTIONS & SOFTWARE</span>
+            <FiBox size={14} />
+            <span>PROPRIETARY SOLUTIONS &amp; SOFTWARE</span>
           </div>
           <h2 className="section-title">
             Intelligent Marketing Software &{' '}
@@ -163,7 +164,7 @@ export default function Products({ onOpenDemoModal, onBookProduct }) {
                   <div className="product-features">
                     {product.features.map((feat, idx) => (
                       <div key={idx} className="product-feature-item">
-                        <CheckCircle2 size={15} className="feature-tick" />
+                        <FiCheckCircle size={15} className="feature-tick" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -183,7 +184,7 @@ export default function Products({ onOpenDemoModal, onBookProduct }) {
                       onClick={() => onOpenDemoModal(product)}
                       aria-label={`Request interactive demo of ${product.name}`}
                     >
-                      <PlayCircle size={16} />
+                      <FiPlayCircle size={16} />
                       <span>{product.cta}</span>
                     </button>
 
@@ -194,7 +195,7 @@ export default function Products({ onOpenDemoModal, onBookProduct }) {
                       aria-label={`Get pricing for ${product.name}`}
                     >
                       <span>Inquire Pricing</span>
-                      <ArrowRight size={14} />
+                      <FiArrowRight size={14} />
                     </button>
                   </div>
                 </div>

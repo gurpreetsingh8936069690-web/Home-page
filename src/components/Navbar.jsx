@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, Sparkles } from 'lucide-react';
+import { FiMenu, FiX, FiArrowRight, FiSun, FiMoon } from 'react-icons/fi';
 import { agencyData } from '../data/agencyData';
+import RvCanvasLogo from './RvCanvasLogo';
 
-export default function Navbar({ onOpenContact }) {
+export default function Navbar({ onOpenContact, theme = 'dark', onToggleTheme }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -72,9 +73,7 @@ export default function Navbar({ onOpenContact }) {
           aria-label={`${agencyData.brand.name} ${agencyData.brand.suffix} Homepage`}
         >
           <div className="logo-symbol">
-            <span className="logo-spark">
-              <Sparkles size={18} />
-            </span>
+            <RvCanvasLogo size={24} />
           </div>
           <span className="logo-text">
             {agencyData.brand.name}
@@ -107,8 +106,19 @@ export default function Navbar({ onOpenContact }) {
           </ul>
         </nav>
 
-        {/* Desktop CTA Button */}
+        {/* Desktop CTA & Theme Toggle */}
         <div className="navbar-actions">
+          {/* Theme Toggle Button */}
+          <button
+            type="button"
+            className="theme-toggle-btn"
+            onClick={onToggleTheme}
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {theme === 'dark' ? <FiSun className="theme-icon" /> : <FiMoon className="theme-icon" />}
+          </button>
+
           <a
             href="#contact"
             className="btn btn-primary btn-sm nav-cta-btn"
@@ -119,7 +129,7 @@ export default function Navbar({ onOpenContact }) {
             }}
           >
             <span>Get Started</span>
-            <ArrowRight size={15} />
+            <FiArrowRight size={15} />
           </a>
 
           {/* Mobile Hamburger Toggle Button */}
@@ -130,7 +140,7 @@ export default function Navbar({ onOpenContact }) {
             aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
             aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
         </div>
       </div>
@@ -153,7 +163,7 @@ export default function Navbar({ onOpenContact }) {
             }}
           >
             <div className="logo-symbol">
-              <Sparkles size={18} />
+              <RvCanvasLogo size={24} />
             </div>
             <span className="logo-text">
               {agencyData.brand.name}
@@ -166,7 +176,7 @@ export default function Navbar({ onOpenContact }) {
             onClick={() => setMobileMenuOpen(false)}
             aria-label="Close menu"
           >
-            <X size={22} />
+            <FiX size={22} />
           </button>
         </div>
 
@@ -186,7 +196,7 @@ export default function Navbar({ onOpenContact }) {
                     }}
                   >
                     <span>{item.label}</span>
-                    <ArrowRight size={16} className="nav-arrow" />
+                    <FiArrowRight size={16} className="nav-arrow" />
                   </a>
                 </li>
               );
@@ -195,6 +205,29 @@ export default function Navbar({ onOpenContact }) {
         </nav>
 
         <div className="mobile-drawer-footer">
+          {/* Theme Mode Switcher in Drawer */}
+          <div className="mobile-drawer-theme-row">
+            <span className="drawer-theme-label">Appearance</span>
+            <button
+              type="button"
+              className="drawer-theme-pill"
+              onClick={onToggleTheme}
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {theme === 'dark' ? (
+                <>
+                  <FiSun size={16} className="text-amber" />
+                  <span>Switch to Light</span>
+                </>
+              ) : (
+                <>
+                  <FiMoon size={16} className="text-indigo" />
+                  <span>Switch to Dark</span>
+                </>
+              )}
+            </button>
+          </div>
+
           <div className="mobile-drawer-contact-info">
             <p className="drawer-contact-label">Direct Client Inquiries:</p>
             <a href={`mailto:${agencyData.contact.email}`} className="drawer-contact-val">
@@ -215,7 +248,7 @@ export default function Navbar({ onOpenContact }) {
             }}
           >
             <span>Get Started</span>
-            <ArrowRight size={18} />
+            <FiArrowRight size={18} />
           </a>
         </div>
       </div>

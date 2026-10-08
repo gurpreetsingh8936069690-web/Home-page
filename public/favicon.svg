@@ -1,12 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366f1" />
-      <stop offset="50%" stop-color="#3b82f6" />
+    <linearGradient id="rvFavGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#2563eb" />
       <stop offset="100%" stop-color="#06b6d4" />
     </linearGradient>
+    <linearGradient id="rvStrokeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
   </defs>
-  <rect width="48" height="48" rx="12" fill="#0a0f1d" />
-  <path d="M12 36 L24 12 L36 36 L29 36 L24 24 L19 36 Z" fill="url(#grad)" />
-  <circle cx="24" cy="20" r="3" fill="#ffffff" />
+
+  <!-- Dark container background with rounded squircle -->
+  <rect width="48" height="48" rx="12" fill="#080d1a" stroke="#6366f1" stroke-width="1.2" stroke-opacity="0.4" />
+  <rect x="2" y="2" width="44" height="44" rx="10" fill="url(#rvFavGrad)" />
+
+  <!-- Canvas corner framing brackets -->
+  <path d="M7 14 L7 7 L14 7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.75" fill="none" />
+  <path d="M41 34 L41 41 L34 41" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.9" fill="none" />
+
+  <!-- Monogram Letter R -->
+  <path d="M13 35 L13 13 L21.5 13 C25.5 13 27.5 15.2 27.5 18.5 C27.5 21.8 25.5 24 21.5 24 L13 24" stroke="url(#rvStrokeGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <path d="M19.5 24 L26 35" stroke="url(#rvStrokeGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+  <!-- Monogram Letter V -->
+  <path d="M26.5 13 L32.5 35 L38.5 13" stroke="url(#rvStrokeGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+  <!-- Creative Canvas Accent Dot -->
+  <circle cx="40" cy="8" r="2.5" fill="#38bdf8" />
 </svg>

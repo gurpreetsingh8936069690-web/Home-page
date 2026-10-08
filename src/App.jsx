@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,6 +13,25 @@ import LegalModal from './components/LegalModal';
 import './App.css';
 
 export default function App() {
+  // Theme state: 'dark' | 'light' (persisted in localStorage)
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('rv_canvas_theme');
+      if (stored === 'dark' || stored === 'light') return stored;
+      return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    return 'dark';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('rv_canvas_theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
+
   // Modal states
   const [selectedService, setSelectedService] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -49,7 +68,11 @@ export default function App() {
   return (
     <div className="agency-app">
       {/* 1. STICKY RESPONSIVE NAVBAR */}
-      <Navbar onOpenContact={handleOpenContact} />
+      <Navbar
+        onOpenContact={handleOpenContact}
+        theme={theme}
+        onToggleTheme={toggleTheme}
+      />
 
       {/* MAIN HOMEPAGE SECTIONS */}
       <main id="main-content">

@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import {
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  Send,
-  CheckCircle,
-  Sparkles,
-  ShieldCheck,
-  Copy,
-  Check,
-  AlertCircle,
-} from 'lucide-react';
+  FiMail,
+  FiPhone,
+  FiMapPin,
+  FiClock,
+  FiSend,
+  FiCheckCircle,
+  FiShield,
+  FiCopy,
+  FiCheck,
+  FiAlertCircle,
+} from 'react-icons/fi';
 import { agencyData } from '../data/agencyData';
 
 export default function Contact({ preselectedService, onResetPreselected }) {
@@ -155,7 +154,7 @@ export default function Contact({ preselectedService, onResetPreselected }) {
         {/* Section Header */}
         <div className="section-header">
           <div className="section-badge contact-badge">
-            <Sparkles size={14} />
+            <FiShield size={14} />
             <span>LET'S BUILD YOUR GROWTH ENGINE</span>
           </div>
           <h2 className="section-title">
@@ -178,7 +177,7 @@ export default function Contact({ preselectedService, onResetPreselected }) {
               {/* Contact Item: Email */}
               <div className="contact-detail-item">
                 <div className="contact-icon-box">
-                  <Mail size={18} />
+                  <FiMail size={18} />
                 </div>
                 <div className="contact-detail-text">
                   <span className="detail-label">Official Work Email</span>
@@ -193,14 +192,14 @@ export default function Contact({ preselectedService, onResetPreselected }) {
                   title="Copy email to clipboard"
                   aria-label="Copy email address"
                 >
-                  {copiedField === 'email' ? <Check size={16} className="text-emerald" /> : <Copy size={16} />}
+                  {copiedField === 'email' ? <FiCheck size={16} className="text-emerald" /> : <FiCopy size={16} />}
                 </button>
               </div>
 
               {/* Contact Item: Phone */}
               <div className="contact-detail-item">
                 <div className="contact-icon-box">
-                  <Phone size={18} />
+                  <FiPhone size={18} />
                 </div>
                 <div className="contact-detail-text">
                   <span className="detail-label">Client Concierge Line</span>
@@ -218,14 +217,14 @@ export default function Contact({ preselectedService, onResetPreselected }) {
                   title="Copy phone number"
                   aria-label="Copy phone number"
                 >
-                  {copiedField === 'phone' ? <Check size={16} className="text-emerald" /> : <Copy size={16} />}
+                  {copiedField === 'phone' ? <FiCheck size={16} className="text-emerald" /> : <FiCopy size={16} />}
                 </button>
               </div>
 
               {/* Contact Item: Address */}
               <div className="contact-detail-item">
                 <div className="contact-icon-box">
-                  <MapPin size={18} />
+                  <FiMapPin size={18} />
                 </div>
                 <div className="contact-detail-text">
                   <span className="detail-label">Headquarters Office</span>
@@ -238,7 +237,7 @@ export default function Contact({ preselectedService, onResetPreselected }) {
               {/* Contact Item: Business Hours */}
               <div className="contact-detail-item">
                 <div className="contact-icon-box">
-                  <Clock size={18} />
+                  <FiClock size={18} />
                 </div>
                 <div className="contact-detail-text">
                   <span className="detail-label">Operating Hours</span>
@@ -248,7 +247,7 @@ export default function Contact({ preselectedService, onResetPreselected }) {
 
               {/* Guarantee Box */}
               <div className="contact-guarantee-pill">
-                <ShieldCheck size={18} className="shield-icon" />
+                <FiShield size={18} className="shield-icon" />
                 <span>{agencyData.contact.guarantee}</span>
               </div>
             </div>
@@ -261,7 +260,7 @@ export default function Contact({ preselectedService, onResetPreselected }) {
                 /* Success State */
                 <div className="form-success-container">
                   <div className="success-icon-wrap">
-                    <CheckCircle size={48} className="success-icon" />
+                    <FiCheckCircle size={48} className="success-icon" />
                   </div>
                   <h3 className="success-title">Strategy Proposal Requested!</h3>
                   <p className="success-desc">
@@ -477,7 +476,7 @@ export default function Contact({ preselectedService, onResetPreselected }) {
                     />
                     {errors.message && touched.message && (
                       <div id="message-error" className="field-error-msg">
-                        <AlertCircle size={13} />
+                        <FiAlertCircle size={13} />
                         <span>{errors.message}</span>
                       </div>
                     )}
@@ -498,12 +497,12 @@ export default function Contact({ preselectedService, onResetPreselected }) {
                       ) : (
                         <>
                           <span>Submit Proposal Request</span>
-                          <Send size={16} />
+                          <FiSend size={16} />
                         </>
                       )}
                     </button>
                     <span className="privacy-note">
-                      🔒 We respect your privacy. No spam, ever.
+                      We respect your privacy. Strictly zero spam.
                     </span>
                   </div>
                 </form>

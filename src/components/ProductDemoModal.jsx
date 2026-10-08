@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, CheckCircle2, ArrowRight, Zap } from 'lucide-react';
+import { FiX, FiCheckCircle, FiArrowRight, FiBox } from 'react-icons/fi';
 
 export default function ProductDemoModal({ product, onClose, onBookProduct }) {
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function ProductDemoModal({ product, onClose, onBookProduct }) {
         {/* Header */}
         <div className="modal-header">
           <div className="modal-header-tag product-tag">
-            <Zap size={14} />
+            <FiBox size={14} />
             <span>{product.tier}</span>
           </div>
           <button
@@ -31,7 +31,7 @@ export default function ProductDemoModal({ product, onClose, onBookProduct }) {
             onClick={onClose}
             aria-label="Close product demo details"
           >
-            <X size={20} />
+            <FiX size={20} />
           </button>
         </div>
 
@@ -51,7 +51,7 @@ export default function ProductDemoModal({ product, onClose, onBookProduct }) {
           <div className="modal-deliverables-list">
             {product.features.map((feat, idx) => (
               <div key={idx} className="modal-deliverable-item">
-                <CheckCircle2 size={16} className="text-cyan" />
+                <FiCheckCircle size={16} className="text-cyan" />
                 <span>{feat}</span>
               </div>
             ))}
@@ -69,7 +69,7 @@ export default function ProductDemoModal({ product, onClose, onBookProduct }) {
             }}
           >
             <span>Request Sandbox Demo &amp; Pricing</span>
-            <ArrowRight size={16} />
+            <FiArrowRight size={16} />
           </button>
 
           <button

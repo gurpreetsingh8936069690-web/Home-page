@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import {
-  ArrowRight,
-  TrendingUp,
-  CheckCircle2,
-  Search,
-  Target,
-  Star,
-  Zap,
-  Award,
-  Users,
-  Activity,
-  Calendar,
-  Sparkles,
-} from 'lucide-react';
+  FiArrowRight,
+  FiTrendingUp,
+  FiCheckCircle,
+  FiSearch,
+  FiTarget,
+  FiStar,
+  FiAward,
+  FiUsers,
+  FiCalendar,
+  FiBarChart2,
+  FiActivity,
+} from 'react-icons/fi';
 import { agencyData } from '../data/agencyData';
 
 export default function Hero({ onOpenContact }) {
@@ -30,7 +29,7 @@ export default function Hero({ onOpenContact }) {
   const currentTimeframeData =
     agencyData.hero.timeframes[activeTimeframe] || agencyData.hero.timeframes['30D'];
 
-  const statsIcons = [Award, Users, Zap, TrendingUp];
+  const statsIcons = [FiAward, FiUsers, FiTrendingUp, FiCheckCircle];
 
   return (
     <section id="home" className="hero-section">
@@ -81,7 +80,7 @@ export default function Hero({ onOpenContact }) {
               <div className="social-proof-details">
                 <div className="stars-row" aria-label="5 out of 5 stars">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={14} fill="#f59e0b" color="#f59e0b" />
+                    <FiStar key={i} size={14} className="star-icon-filled" />
                   ))}
                   <strong className="rating-score">{agencyData.hero.socialProof.rating}</strong>
                 </div>
@@ -97,14 +96,14 @@ export default function Hero({ onOpenContact }) {
           <div className="hero-cta-group">
             <a
               href="#contact"
-              className="btn btn-primary btn-lg hero-primary-btn btn-shimmer"
+              className="btn btn-primary btn-lg hero-primary-btn"
               onClick={(e) => {
                 scrollToSection(e, 'contact');
                 if (onOpenContact) onOpenContact();
               }}
             >
               <span>{agencyData.hero.primaryCta.label}</span>
-              <ArrowRight size={18} className="btn-arrow" />
+              <FiArrowRight size={18} className="btn-arrow" />
             </a>
 
             <a
@@ -119,16 +118,16 @@ export default function Hero({ onOpenContact }) {
           {/* Trust Guarantees */}
           <div className="hero-guarantees">
             <div className="guarantee-item">
-              <CheckCircle2 size={16} className="guarantee-icon" />
-              <span>No Long-Term Lock-in</span>
+              <FiCheckCircle size={16} className="guarantee-icon" />
+              <span>Direct Senior Partner Oversight</span>
             </div>
             <div className="guarantee-item">
-              <CheckCircle2 size={16} className="guarantee-icon" />
-              <span>Dedicated Senior Team</span>
+              <FiCheckCircle size={16} className="guarantee-icon" />
+              <span>Transparent Multi-Touch Attribution</span>
             </div>
             <div className="guarantee-item">
-              <CheckCircle2 size={16} className="guarantee-icon" />
-              <span>Real-Time ROI Attribution</span>
+              <FiCheckCircle size={16} className="guarantee-icon" />
+              <span>Sprint-Based Performance Terms</span>
             </div>
           </div>
         </div>
@@ -183,7 +182,7 @@ export default function Hero({ onOpenContact }) {
                 {/* Timeframe Filter Bar */}
                 <div className="dashboard-timeframe-bar">
                   <span className="timeframe-label">
-                    <Calendar size={13} />
+                    <FiCalendar size={13} />
                     <span>Timeframe:</span>
                   </span>
                   <div className="timeframe-buttons">
@@ -208,7 +207,7 @@ export default function Hero({ onOpenContact }) {
                         {currentTimeframeData.revenue}
                       </span>
                       <span className="metric-pill positive">
-                        <TrendingUp size={14} /> {currentTimeframeData.revenueGrowth}
+                        <FiTrendingUp size={14} /> {currentTimeframeData.revenueGrowth}
                       </span>
                     </div>
                   </div>
@@ -236,14 +235,14 @@ export default function Hero({ onOpenContact }) {
                   </div>
                 </div>
 
-                {/* Live Event Ticker */}
+                {/* Performance Impact Summary */}
                 <div className="live-event-banner">
                   <div className="live-event-indicator">
-                    <Activity size={13} className="pulse-icon" />
-                    <span>LIVE EVENT</span>
+                    <FiActivity size={13} className="pulse-icon" />
+                    <span>AUDITED METRIC</span>
                   </div>
                   <span className="live-event-text">
-                    {currentTimeframeData.liveEvent}
+                    {currentTimeframeData.highlightMetric}
                   </span>
                 </div>
 
@@ -251,21 +250,21 @@ export default function Hero({ onOpenContact }) {
                 <div className="live-channels-grid">
                   <div className="channel-box">
                     <div className="channel-icon-wrap seo">
-                      <Search size={15} />
+                      <FiSearch size={15} />
                     </div>
                     <div className="channel-info">
-                      <span className="channel-name">SEO Organic</span>
+                      <span className="channel-name">SEO Organic Search</span>
                       <span className="channel-stat">+185% Traffic / #1 Ranked</span>
                     </div>
                   </div>
 
                   <div className="channel-box">
                     <div className="channel-icon-wrap ppc">
-                      <Target size={15} />
+                      <FiTarget size={15} />
                     </div>
                     <div className="channel-info">
-                      <span className="channel-name">Google & Meta Ads</span>
-                      <span className="channel-stat">{currentTimeframeData.roas} ROAS</span>
+                      <span className="channel-name">Google &amp; Meta Ads</span>
+                      <span className="channel-stat">{currentTimeframeData.roas} ROAS Average</span>
                     </div>
                   </div>
                 </div>
@@ -343,32 +342,21 @@ export default function Hero({ onOpenContact }) {
               </div>
             )}
 
-            {/* Floating Live Badges with Micro-Interactions */}
-            <div className="floating-badge badge-top-right float-anim">
-              <div className="floating-badge-icon">
-                <Star size={15} fill="#f59e0b" color="#f59e0b" />
+            {/* Professional Integrated Dashboard Footer */}
+            <div className="dashboard-footer-status">
+              <div className="status-pill-item">
+                <FiStar size={13} className="text-amber" />
+                <span><strong>{agencyData.brand.rating}</strong> Client Rating</span>
               </div>
-              <div className="floating-badge-text">
-                <strong>{agencyData.brand.rating} Rating</strong>
-                <span>{agencyData.brand.totalReviews} verified clients</span>
+              <div className="status-sep">•</div>
+              <div className="status-pill-item">
+                <FiTrendingUp size={13} className="text-emerald" />
+                <span><strong>4.8x</strong> Target ROAS</span>
               </div>
-            </div>
-
-            <div className="floating-badge badge-bottom-left float-anim-reverse">
-              <div className="pulse-indicator" />
-              <div className="floating-badge-text">
-                <strong>Real-Time Sprints</strong>
-                <span>Weekly optimization cycles</span>
-              </div>
-            </div>
-
-            <div className="floating-badge badge-top-left float-anim-subtle">
-              <div className="floating-badge-icon cyan-icon">
-                <Zap size={14} />
-              </div>
-              <div className="floating-badge-text">
-                <strong>Top 1% ROAS</strong>
-                <span>Performance certified</span>
+              <div className="status-sep">•</div>
+              <div className="status-pill-item">
+                <FiCheckCircle size={13} className="text-cyan" />
+                <span>GA4 Attribution Audited</span>
               </div>
             </div>
           </div>
